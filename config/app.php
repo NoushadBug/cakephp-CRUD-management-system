@@ -9,14 +9,14 @@ use Cake\Mailer\Transport\MailTransport;
 
 return [
     /*
-     * Debug Level:
-     *
-     * Production Mode:
-     * false: No error messages, errors, or warnings shown.
-     *
-     * Development Mode:
-     * true: Errors and warnings shown.
-     */
+                 * Debug Level:
+                 *
+                 * Production Mode:
+                 * false: No error messages, errors, or warnings shown.
+         *
+         * Development Mode:
+         * true: Errors and warnings shown.
+         */
     'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /*
@@ -290,6 +290,13 @@ return [
             'driver' => Mysql::class,
             'persistent' => false,
             'timezone' => 'UTC',
+            'host' => 'localhost',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'crudcake',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'cacheMetadata' => true,
 
             /**
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
